@@ -7,7 +7,8 @@ function App() {
   const [randomDndClass, setRandomDndClass] = useState("");
 
   const getRandomDndClass = () => {
-  fetch('http://localhost:3000/random-dnd-class')
+    // http://localhost:3000/random-dnd-class
+  fetch('https://dnd-generator.onrender.com/random-class')
       .then(response => response.json())
       .then(data => setRandomDndClass(data.class))
       .catch(error => console.error('Error fetching random D&D class:', error));
