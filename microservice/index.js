@@ -22,7 +22,7 @@ const dndClasses = [
 ];
 
 // Route to get a random D&D class
-app.get('/random-dnd-class', (req, res) => {
+app.get('/random-class', (req, res) => {
   const randomIndex = Math.floor(Math.random() * dndClasses.length);
   const randomClass = dndClasses[randomIndex];
   res.json({ class: randomClass });
